@@ -1,0 +1,38 @@
+{
+  "name": "orange-cat-lens",
+  "displayName": "Orange Cat",
+  "description": "The official extension for vscode of Orange Cat Programming language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.92.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "orangecat",
+        "aliases": [
+          "Orange Cat",
+          "orangecat"
+        ],
+        "extensions": [
+          ".ocat",
+          ".oc"
+        ],
+        "configuration": "./grammars/orangecat.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "orangecat",
+        "scopeName": "source.ocat",
+        "path": "./syntaxes/orangecat.tmLanguage.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "orange-cat-lens": "file:"
+  }
+}

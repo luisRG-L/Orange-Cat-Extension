@@ -1,0 +1,79 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Orange Cat",
+    "fileTypes": ["oc", "ocat"],
+	"patterns": [
+        {
+            "include": "#comments"
+        },
+		{
+			"include": "#strings"
+		},
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#types"
+        },
+        {
+            "include": "#operators"
+        }
+	],
+	"repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.block.orangecat",
+                    "begin": "/\\*",
+                    "end": "\\*/"
+                }
+            ]
+        },
+		"strings": {
+			"name": "string.quoted.double.orangecat",
+			"begin": "\"",
+			"end": "\""
+		},
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.orangecat",
+                    "match": "\\b(if|else|print)\\b"
+                },
+                {
+                    "name": "keyword.other.orangecat",
+                    "match": "\\b(import|using)\\b"
+                }
+            ]
+        },
+        "types": {
+            "patterns": [
+                {
+                    "name": "storage.type.orangecat",
+                    "match": "\\b(int|decimal|string|bool|func)\\b"
+                },
+                {
+                    "name": "constant.language",
+                    "match": "\\b(true|false|void)\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.orangecat",
+                    "match": "\\+|\\b|\\*|\\/|\\=|\\!=|\\<|"
+                }
+            ]
+        },
+        "oop": {
+            "patterns": [
+                {
+                    "name": "entity.name.constructor.orangecat",
+                    "match": "\\bctor\\b"
+                }
+            ]
+        }
+	},
+	"scopeName": "source.ocat"
+}
