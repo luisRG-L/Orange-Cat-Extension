@@ -25,14 +25,30 @@
                 {
                     "name": "comment.block.orangecat",
                     "begin": "/\\*",
-                    "end": "\\*/"
+                    "end": "\\*/",
+                    "patterns": [
+                        {
+                            "name": "comment.block.documentation.tag.orangecat",
+                            "match": "\\s+@\\w+"
+                        }
+                    ]
                 }
             ]
         },
 		"strings": {
-			"name": "string.quoted.double.orangecat",
-			"begin": "\"",
-			"end": "\""
+            "patterns": [
+                {
+                    "name": "string.quoted.double.orangecat",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.orangecat",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
 		},
         "keywords": {
             "patterns": [
@@ -70,7 +86,7 @@
             "patterns": [
                 {
                     "name": "entity.name.constructor.orangecat",
-                    "match": "\\bctor\\b"
+                    "match": "ctor"
                 }
             ]
         }

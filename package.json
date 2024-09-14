@@ -3,6 +3,9 @@
   "displayName": "Orange Cat",
   "description": "The official extension for vscode of Orange Cat Programming language",
   "version": "0.0.1",
+  "publisher": "LuisRG-L",
+  "author": "LuisRG-L",
+  "activationEvents": [],
   "engines": {
     "vscode": "^1.92.0"
   },
@@ -22,6 +25,30 @@
           ".oc"
         ],
         "configuration": "./grammars/orangecat.json"
+      },
+      {
+        "id": "odoc",
+        "aliases": [
+          "Orange Documentation",
+          "odoc"
+        ],
+        "extensions": [
+          ".odoc",
+          ".od"
+        ],
+        "configuration": "./grammars/odoc.json"
+      },
+      {
+        "id": "ocmn",
+        "aliases": [
+          "Orange Cat Markup Language",
+          "ocmn"
+        ],
+        "extensions": [
+          ".ocmn",
+          ".omn"
+        ],
+        "configuration": "./grammars/ocmn.json"
       }
     ],
     "grammars": [
@@ -29,10 +56,141 @@
         "language": "orangecat",
         "scopeName": "source.ocat",
         "path": "./syntaxes/orangecat.tmLanguage.json"
+      },
+      {
+        "language": "odoc",
+        "scopeName": "source.odoc",
+        "path": "./syntaxes/odoc.tmLanguage.json"
+      },
+      {
+        "language": "ocmn",
+        "scopeName": "source.ocmn",
+        "path": "./syntaxes/ocmn.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "orangecat",
+        "path": "./snippets/orange-cat-snippets.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "orangecat.run",
+        "title": "Run Orange Cat"
+      },
+      {
+        "command": "orangecat.render",
+        "title": "Visualizar ODOC"
+      },
+      {
+        "command": "orangecat.createProject",
+        "title": "New Ocat Project",
+        "category": "File"
+      },
+      {
+        "command": "orangecat.sayHello",
+        "title": "Say Hello"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "orangecat.run",
+          "when": "resourceExtname == .ocat || resourceExtname == .oc",
+          "group": "navigation"
+        },
+        {
+          "command": "orangecat.render",
+          "when": "resourceExtname == .odoc",
+          "group": "navigation"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "orangecat.render",
+          "when": "resourceExtname == .odoc",
+          "group": "navigation"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "orangecat.createProject",
+          "group": "navigation"
+        }
+      ]
+    },
+    "themes": [
+      {
+        "label": "Orange Cat Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/ocat-dark-theme.json"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "orangeCatManager",
+          "title": "Orange Cat",
+          "icon": "images/orangecat.svg"
+        }
+      ]
+    },
+    "views": {
+      "orangeCatManager": [
+        {
+          "id": "orangeCatPackageManager",
+          "name": "PackageManager",
+          "contextualTitle": "Package Manager",
+          "type": "tree",
+          "treeView": true
+        },
+        {
+          "name": "orangeCatMarker",
+          "id": "orangeCatMarker",
+          "contextualTitle": "Markers",
+          "type": "webview"
+        },
+        {
+          "id": "orangeCatExplorer",
+          "name": "Explorer",
+          "contextualTitle": "Orange Cat Explorer",
+          "type": "tree",
+          "treeView": true
+        }
+      ]
+    },
+    "iconThemes": [
+      {
+        "id": "Orange Cat Icons",
+        "label": "Orange Cat Icons",
+        "path": "./themes/ocat-icon.theme.json"
       }
     ]
   },
+  "main": "./out/extension.js",
   "dependencies": {
     "orange-cat-lens": "file:"
-  }
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.0",
+    "@types/vscode": "^1.92.0",
+    "mocha": "^5.2.0",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "test": "mocha",
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./"
+  },
+  "keywords": [
+    "orange",
+    "cat",
+    "programming",
+    "language",
+    "vscode",
+    "extension",
+    "simple"
+  ],
+  "license": "ISC"
 }

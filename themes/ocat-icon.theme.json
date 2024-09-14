@@ -1,0 +1,74 @@
+{
+    "iconDefinitions": {
+        "icon-base": {
+            "iconPath": "../images/folders/base.svg"
+        },
+        "icon-base-open": {
+            "iconPath": "../images/folders/base_open.svg"
+        },
+        "icon-ocat": {
+            "iconPath": "../images/folders/ocat.svg"
+        },
+        "icon-ocat-open": {
+            "iconPath": "../images/folders/ocat_open.svg"
+        },
+        "icon-stack": {
+            "iconPath": "../images/folders/stack.svg"
+        },
+        "icon-stack-open": {
+            "iconPath": "../images/folders/stack_open.svg"
+        },
+        "icon-docs": {
+            "iconPath": "../images/folders/docs.svg"
+        },
+        "icon-docs-open": {
+            "iconPath": "../images/folders/docs_open.svg"
+        },
+        "icon-src": {
+            "iconPath": "../images/folders/source.svg"
+        },
+        "icon-src-open": {
+            "iconPath": "../images/folders/source_open.svg"
+        },
+        
+
+
+
+        "icon-ocmn": {
+            "iconPath": "../images/files/ocmn.svg"
+        },
+        "icon-project-ocmn": {
+            "iconPath": "../images/files/projectocmn.svg"
+        },
+        "icon-orangecat": {
+            "iconPath": "../images/files/ocat.svg"
+        },
+        "icon-odoc": {
+            "iconPath": "../images/files/odoc.svg"
+        }
+    },
+    "fileExtensions": {
+        "ocat": "icon-orangecat",
+        "odoc": "icon-odoc",
+        "ocmn": "icon-ocmn"
+    },
+    "fileNames": {
+        "project.ocmn": "icon-project-ocmn"
+    },
+    "folderNames": {
+        "base": "icon-base",
+        "ocat": "icon-ocat",
+        ".ocat": "icon-ocat",
+        "stack": "icon-stack",
+        "docs": "icon-docs",
+        "src": "icon-src"
+    },
+    "folderNamesExpanded": {
+        "base": "icon-base-open",
+        "ocat": "icon-ocat-open",
+        ".ocat": "icon-ocat-open",
+        "stack": "icon-stack-open",
+        "docs": "icon-docs-open",
+        "src": "icon-src-open"
+    }
+}

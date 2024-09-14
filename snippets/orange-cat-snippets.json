@@ -1,0 +1,46 @@
+{
+    "Comment": {
+        "prefix": "Catdoc comment",
+        "body": [
+            "/** $1 $2!",
+            " * @name $3",
+            " * @$3 $5",
+            "**/"
+        ],
+        "description": "CatDoc comment for your project documentation"
+    },
+    "Initial Comment": {
+        "prefix": "Initial catdoc comment",
+        "body": [
+            "/** file: $1.ocat!",
+            " * @file $2.ocat",
+            " * @author $3",
+            " * @description $4",
+            " *",
+            " * @$5 $6",
+            "**/"
+        ],
+        "description": "Initial CatDoc comment for @file"
+    },
+    "variable declaration": {
+        "prefix": "Variable declaration",
+        "body": [
+            "$1 $2 = $3"
+        ],
+        "description": "Variable declaration"
+    },
+    "int declaration": {
+        "prefix": "int",
+        "body": [
+            "int $1 = $2"
+        ],
+        "description": "Integer variable declaration"
+    },
+    "decimal declaration": {
+        "prefix": "decimal",
+        "body": [
+            "decimal $1 = $2"
+        ],
+        "description": "Decimal variable declaration"
+    }
+}

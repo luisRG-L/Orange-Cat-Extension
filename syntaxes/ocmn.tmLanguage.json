@@ -1,0 +1,88 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Orange Cat Markup Language",
+    "fileTypes": ["ocmn", "omn"],
+    "patterns": [
+        {
+            "include": "#meta"
+        },
+        {
+            "include": "#tags"
+        },
+        {
+            "include": "#strings"
+        }
+    ],
+    "repository": {
+        "meta": {
+        "patterns": [
+            {
+            "name": "meta.type.orangecat",
+            "match": "\\?[^=]+=[^?]+\\?",
+            "patterns": [
+                {
+                "name": "meta.schema.orangecat",
+                "match": "\\bschema\\b"
+                },
+                {
+                "name": "meta.selector.orangecat",
+                "match": "\\bselector\\b"
+                }
+            ]
+            }
+        ]
+        },
+        "tags": {
+            "patterns": [
+                {
+                    "name": "tag.name.orangecat",
+                    "match": "<[a-zA-Z][a-zA-Z0-9]*>",
+                    "patterns": [
+                        {
+                            "name": "attribute.name.orangecat",
+                            "match": "\\s+[a-zA-Z][a-zA-Z0-9]*="
+                            },
+                            {
+                            "name": "attribute.value.orangecat",
+                            "begin": "=",
+                            "end": "[\\s/>]",
+                            "patterns": [
+                                {
+                                "name": "string.quoted.double.orangecat",
+                                "begin": "\"",
+                                "end": "\"",
+                                "patterns": [
+                                    {
+                                    "name": "constant.character.escape.orangecat",
+                                    "match": "\\\\."
+                                    }
+                                ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "name": "tag.closing.orangecat",
+                    "match": "<[a-zA-Z][a-zA-Z0-9]*/>"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.orangecat",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.orangecat",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+		}
+    },
+    "scopeName": "source.ocmn"
+}

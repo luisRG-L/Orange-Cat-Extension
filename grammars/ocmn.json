@@ -9,6 +9,7 @@
         ["(", ")"]
     ],
     "autoClosingPairs": [
+        ["<", ">"],
         ["{", "}"],
         ["[", "]"],
         ["(", ")"],
@@ -24,8 +25,8 @@
     ],
     "folding": {
         "markers": {
-            "start": "\\b(func|class|if|else|ctor)\\b",
-            "end": "\\}|\\;|"
+            "start": "\\<",
+            "end": "\\/"
         }
     }
 }
